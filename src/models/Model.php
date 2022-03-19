@@ -40,6 +40,13 @@ class Model {
         return $objects;
     }
 
+    public static function getOne($filters = [], $columns = '*') {
+        $class = get_called_class();
+        $result = static::getResultSetFromSelect($filters, $columns);
+
+        return $result ? new $class($result->fetch_assoc()) : null;
+    }
+
     public static function getResultSetFromSelect($filters = [], $columns = '*') {
         $sql = "SELECT ${columns} FROM " 
             . static::$tableName
