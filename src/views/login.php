@@ -35,6 +35,7 @@
                             type="email" 
                             name="email" 
                             id="email" 
+                            value="<?= $email ?>"
                             class="form-control" 
                             placeholder="Informe o e-mail" 
                             autofocus
@@ -46,8 +47,8 @@
                         
                         <input 
                             type="password" 
-                            name="senha" 
-                            id="senha" 
+                            name="password" 
+                            id="password" 
                             class="form-control" 
                             placeholder="Informe a senha"
                         >
@@ -55,7 +56,7 @@
                 </div>
 
                 <div class="card-footer">
-                    <button class="btn btn-lg btn-primary" type="submit">Entrar</button>
+                    <button class="btn btn-lg btn-primary">Entrar</button>
                 </div>
             </div>
         </form>
