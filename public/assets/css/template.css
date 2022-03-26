@@ -21,6 +21,29 @@ body.hide-sidebar {
 
 header.header {
     grid-area: header;
+    display: flex;
+    background-color: #1976D2;
+    align-items: center;
+    z-index: 10;
+    box-shadow:
+        0 2px 4px -1px rgba(0, 0, 0, .2),
+        0 4px 0px 0px rgba(0, 0, 0, .14),
+        0 1px 10px 0px rgba(0, 0, 0, .12);
+}
+
+header.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    flex-basis: 250px;
+    height: 64px;
+}
+
+header.header .menu-toggle {
+    color: white;
+    cursor: pointer;
 }
 
 aside.sidebar {
