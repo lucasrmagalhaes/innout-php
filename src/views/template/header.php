@@ -14,7 +14,7 @@
         <title>In 'n Out</title>
     </head>
 
-    <body>
+    <body class="hide-sidebar">
         <header class="header">
             <div class="logo">
                 <i class="icofont-travelling mr-2"></i>

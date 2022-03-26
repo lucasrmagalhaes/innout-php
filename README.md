@@ -1,7 +1,5 @@
 ### InNOut
 
-admin@cod3r.com.br
-
 **htaccess**
 ```
 http://files.cod3r.com.br/curso-php/htaccess
