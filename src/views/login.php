@@ -38,10 +38,14 @@
                             name="email" 
                             id="email" 
                             value="<?= $email ?>"
-                            class="form-control" 
+                            class="form-control <?= $errors['email'] ? 'is-invalid' : '' ?>"
                             placeholder="Informe o e-mail" 
                             autofocus
                         >
+
+                        <div class="invalid-feedback">
+                            <?= $errors['email'] ?>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -51,9 +55,13 @@
                             type="password" 
                             name="password" 
                             id="password" 
-                            class="form-control" 
+                            class="form-control <?= $errors['password'] ? 'is-invalid' : '' ?>" 
                             placeholder="Informe a senha"
                         >
+
+                        <div class="invalid-feedback">
+                            <?= $errors['password'] ?>
+                        </div>
                     </div>
                 </div>
 
