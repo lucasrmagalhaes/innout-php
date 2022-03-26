@@ -31,9 +31,9 @@
             <div class="spacer"></div>
 
             <div class="dropdown">
-                <div class="dropwon-button">
-                    <span>Usuário Mock</span>
-                    <i class="icofont-simple-down ml-2"></i>
+                <div class="dropdown-button">
+                    <span class="ml-3">Usuário Mock</span>
+                    <i class="icofont-simple-down mx-2"></i>
                 </div>
 
                 <div class="dropdown-content">
