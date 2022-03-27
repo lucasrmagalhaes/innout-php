@@ -98,7 +98,13 @@ header.header .dropdown-content a {
 }
 
 header.header .dropdown-content a:hover {
-    background-color: rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, .1);
+}
+
+header.header .avatar {
+    border-radius: 50%;
+    margin-left: 10px;
+    height: 45px;
 }
 
 aside.sidebar {
