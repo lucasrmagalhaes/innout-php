@@ -145,5 +145,12 @@ main.content {
 }
 
 footer.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 1.2rem;
+    align-items: center;
     grid-area: footer;
+    background-color: #222;
+    color: #FFF;
 }
