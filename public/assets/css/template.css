@@ -102,7 +102,38 @@ header.header .dropdown-content a:hover {
 }
 
 aside.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: sidebar;
+    box-shadow: -5px 0px 25px 1px rgba(0, 0, 0, 0.4);
+    background-color: #FFF;
+}
+
+aside.sidebar .menu {
+    width: 100%;
+    flex-grow: 1;
+}
+
+aside.sidebar .menu ul.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}   
+
+aside.sidebar .menu li.nav-item {
+    padding: 10px 0px 10px 25px;
+    margin: 0;
+}
+
+aside.sidebar .menu li.nav-item  a {
+    font-size: 1.2rem;
+    color: #555;
+    text-decoration: none;
+}
+
+aside.sidebar .menu li.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 body.hide-sidebar aside.sidebar {
