@@ -4,12 +4,14 @@
             'Registrar Ponto',
             'Mantenha seu ponto consistente!',
             'icofont-check-alt'
-        )
+        );
+
+        include(TEMPLATE_PATH . "/messages.php");
     ?>    
 
     <div class="card">
         <div class="card-header">
-            <h3>10 de Janeiro de 2025</h3>
+            <h3><?= $today ?></h3>
             <p class="mb-0">Os batimentos efetuados hoje</p>
         </div>
 
