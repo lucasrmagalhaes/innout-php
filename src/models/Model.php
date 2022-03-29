@@ -89,7 +89,6 @@ class Model {
         Database::executeSQL($sql);
     }
 
-
     private static function getFilters($filters) {
         $sql = '';
 

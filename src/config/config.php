@@ -18,6 +18,7 @@ require_once(realpath(dirname(__FILE__) . '/database.php'));
 require_once(realpath(dirname(__FILE__) . '/loader.php'));
 require_once(realpath(dirname(__FILE__) . '/session.php'));
 require_once(realpath(dirname(__FILE__) . '/date_utils.php'));
+require_once(realpath(dirname(__FILE__) . '/utils.php'));
 require_once(realpath(MODEL_PATH . '/Model.php'));
 require_once(realpath(MODEL_PATH . '/User.php'));
 require_once(realpath(EXCEPTION_PATH . '/AppException.php'));
