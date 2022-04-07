@@ -1,10 +1,11 @@
 <?php
+
 $errors = [];
 
 if (isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
     unset($_SESSION['message']);
-} else if ($exception) {
+} else if (isset($exception)) {
     $message = [
         'type' => 'error',
         'message' => $exception->getMessage()
@@ -17,7 +18,7 @@ if (isset($_SESSION['message'])) {
 
 $alertType = '';
 
-if ($message['type'] === 'error') {
+if (isset($message['type']) && $message['type'] === 'error') {
     $alertType = 'danger';
 } else {
     $alertType = 'success';
@@ -25,10 +26,10 @@ if ($message['type'] === 'error') {
 
 ?>
 
-<?php if ($message): ?>
+<?php if(isset($message)): ?>
     <div 
         role="alert"
-        class="mt-3 alert alert-<?= $alertType ?>" 
+        class="my-3 alert alert-<?= $alertType ?>"
     >
         <?= $message['message'] ?>
     </div>

@@ -34,11 +34,11 @@
                         <label for="email">E-mail</label>
                         
                         <input 
-                            type="email" 
+                            type="email"
                             name="email" 
                             id="email" 
-                            value="<?= $email ?>"
-                            class="form-control <?= $errors['email'] ? 'is-invalid' : '' ?>"
+                            value="<?= isset($email) ? $email : '' ?>"
+                            class="form-control <?= isset($errors['email']) ? 'is-invalid' : '' ?>"
                             placeholder="Informe o e-mail" 
                             autofocus
                         >
@@ -55,7 +55,7 @@
                             type="password" 
                             name="password" 
                             id="password" 
-                            class="form-control <?= $errors['password'] ? 'is-invalid' : '' ?>" 
+                            class="form-control <?= isset($errors['password']) ? 'is-invalid' : '' ?>" 
                             placeholder="Informe a senha"
                         >
 
