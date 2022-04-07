@@ -68,6 +68,7 @@ class WorkingHours extends Model {
         return sumIntervals($part1, $part2);
     }
 
+    /** Calcular Intervalo do Almoço */
     function getLunchInterval() {
         [, $t2, $t3,] = $this->getTimes();
 
@@ -77,6 +78,23 @@ class WorkingHours extends Model {
         if ($t3) $lunchInterval = $t2->diff($t3);
 
         return $lunchInterval;
+    }
+
+    /** Calcular a Hora de Saída */
+    function getExitTime() {
+        [$t1,,, $t4] = $this->getTimes();
+
+        $workday = DateInterval::createFromDateString('8 hours');
+
+        if (!$t1) {
+            return (new DateTimeImmutable())->add($workday);
+        } elseif ($t4) {
+            return $t4;
+        } else {
+            $total = sumIntervals($workday, $this->getLunchInterval());
+            
+            return $t1->add($total);
+        }
     }
 
     private function getTimes() {
