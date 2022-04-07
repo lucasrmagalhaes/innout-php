@@ -10,7 +10,7 @@ class Model {
     }
 
     public function loadFromArray($arr) {
-        if($arr) {
+        if ($arr) {
             foreach($arr as $key => $value) {
                 $this->$key = $value;
             }
@@ -18,7 +18,7 @@ class Model {
     }
 
     public function __get($key) {
-        return $this->values[$key];
+        return $this->values[$key] ?? null;
     }
 
     public function __set($key, $value) {
@@ -63,7 +63,8 @@ class Model {
     }
 
     public function insert() {
-        $sql = "INSERT INTO " . static::$tableName . " (" . implode(",", static::$columns) . ") VALUES (";
+        $sql = "INSERT INTO " . static::$tableName . " ("
+            . implode(",", static::$columns) . ") VALUES (";
         
         foreach (static::$columns as $col) {
             $sql .= static::getFormatedValue($this->$col) . ",";
@@ -85,7 +86,7 @@ class Model {
 
         $sql[strlen($sql) - 1] = ' ';
         $sql .= "WHERE id = {$this->id}";
-       
+        
         Database::executeSQL($sql);
     }
 
@@ -104,9 +105,9 @@ class Model {
     }
 
     private static function getFormatedValue($value) {
-        if(is_null($value)) {
+        if (is_null($value)) {
             return "null";
-        } elseif(gettype($value) == 'string') {
+        } elseif (gettype($value) === 'string') {
             return "'${value}'";
         } else {
             return $value;
