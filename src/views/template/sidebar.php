@@ -36,7 +36,10 @@
             <i class="icon icofont-hour-glass text-primary"></i>
  
             <div class="info">
-                <span class="main text-primary">
+                <span 
+                    class="main text-primary"
+                    <?= $activeClock === 'workedInterval' ? 'active-clock' : '' ?>
+                >
                     <?= $workedInterval ?>
                 </span>
 
@@ -50,7 +53,10 @@
             <i class="icon icofont-ui-alarm text-danger"></i>
  
             <div class="info">
-                <span class="main text-danger">
+                <span 
+                    class="main text-danger"
+                    <?= $activeClock === 'exitTime' ? 'active-clock' : '' ?>
+                >
                     <?= $exitTime ?>
                 </span>
 
