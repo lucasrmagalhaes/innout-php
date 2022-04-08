@@ -21,12 +21,12 @@
             <tbody>
                 <?php foreach($report as $registry): ?>
                     <tr>
-                        <td><?= $registry->work_date ?></td>
-                        <td><?= $registry->time1 ?></td>
-                        <td><?= $registry->time2 ?></td>
-                        <td><?= $registry->time3 ?></td>
-                        <td><?= $registry->time4 ?></td>
-                        <td><?= "Saldo" ?></td>
+                        <td><?= formatDateWithLocale($registry->work_date, '%A, %d de %B de %Y') ?></td>
+						<td><?= $registry->time1 ?></td>
+						<td><?= $registry->time2 ?></td>
+						<td><?= $registry->time3 ?></td>
+						<td><?= $registry->time4 ?></td>
+                        <td><?= $registry->getBalance() ?></td>
                     </tr>
                 <?php endforeach ?>
 
