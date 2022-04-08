@@ -7,6 +7,10 @@ http://localhost:8080/
 http://localhost:8080/data_generator.php
 ```
 
+```
+http://localhost:8080/phpMyAdmin/
+```
+
 **Model**
 - Regras de Negócio
 - Entidades
