@@ -1,16 +1,13 @@
 <?php
+
 session_start();
+
 requireValidSession();
 
 loadModel('WorkingHours');
 
-$date = (new Datetime())->getTimestamp();
-$today = strftime('%d de %B de %Y', $date);
+$date = (new Datetime());
 
-$user = $_SESSION['user'];
-$records = WorkingHours::loadFromUserAndDate($user->id, date('Y-m-d'));
+$today = $date->format('d/m/Y');
 
-loadTemplateView('day_records', [
-    'today' => $today,
-    'records' => $records
-]);
+loadTemplateView('day_records', ['today' => $today]);
