@@ -4,8 +4,6 @@ session_start();
 
 requireValidSession();
 
-loadModel('WorkingHours');
-
 $date = (new Datetime());
 
 $today = $date->format('d/m/Y');
