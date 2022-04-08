@@ -32,6 +32,10 @@ if (count($_POST) === 0 && isset($_GET['update'])) {
             $dbUser->insert();
 
             addSuccessMsg('Usuário cadastrado com sucesso!');
+
+            header('Location: users.php');
+            
+            exit();
         }
 
         $_POST = [];
