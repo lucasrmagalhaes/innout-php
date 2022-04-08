@@ -23,7 +23,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="">
+                <a href="users.php">
                     <i class="icofont-users mr-2"></i>
                     Usuários
                 </a>
