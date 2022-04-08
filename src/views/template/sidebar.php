@@ -37,7 +37,7 @@
  
             <div class="info">
                 <span class="main text-primary">
-                    04:23
+                    <?= $workedInterval ?>
                 </span>
 
                 <span class="label text-muted">Horas Trabalhadas</span>
@@ -51,7 +51,7 @@
  
             <div class="info">
                 <span class="main text-danger">
-                    18:00
+                    <?= $exitTime ?>
                 </span>
 
                 <span class="label text-muted">Hora de Saída</span>
