@@ -1,3 +1,3 @@
 <?php
 
-print_r($registries);
+print_r($report);
