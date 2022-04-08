@@ -2,7 +2,7 @@
 
 session_start();
 
-requireValidSession();
+requireValidSession(true);
 
 $activeUsersCount = User::getActiveUsersCount();
 
